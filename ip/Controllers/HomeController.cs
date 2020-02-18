@@ -20,6 +20,8 @@ namespace ip.Controllers
 
         public IActionResult Index()
         {
+            string ipAddress = HttpContext.Connection.RemoteIpAddress.ToString();
+            ViewBag.IPAddress = ipAddress;
             return View();
         }
 
